@@ -1,4 +1,9 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 import React from 'react';
+import productList from './productList';
 
 const ProductList = ({ products }) => {
   return (
@@ -49,13 +54,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Product Dashboard</h1>
-      {/* Pass products as props to ProductList */}
+      <h1>Performance Parts Dashboard</h1>
       <ProductList products={products} />
-      {/* Render AddProductForm */}
-      <AddProductForm />
     </div>
   );
 };
 
-export default App
+export default App;
