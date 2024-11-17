@@ -3,9 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import React from 'react';
-import productList from './productList';
+import ProductList from './productList';
 
-const ProductList = ({ products }) => {
+const productList = ({ products }) => {
   return (
     <div>
       <h2>Product List</h2>
@@ -52,6 +52,10 @@ const App = () => {
     },
   ];
 
+  const addProduct = (newProduct) => {
+    setProducts((prevProducts) => [...prevProducts, newProduct]);
+  };
+  
   return (
     <div className="App">
       <h1>Performance Parts Dashboard</h1>
